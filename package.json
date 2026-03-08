@@ -1,6 +1,6 @@
 {
   "name": "clipcc-sb1-converter",
-  "version": "1.0.325",
+  "version": "1.0.326",
   "description": "Scratch 1 (.sb) to Scratch 2 (.sb2) conversion library for Scratch 3.0",
   "author": "Clipteam",
   "license": "BSD-3-Clause",
@@ -9,7 +9,6 @@
     "type": "git",
     "url": "https://github.com/Clipteam/scratch-sb1-converter.git"
   },
-  "type": "module",
   "main": "playground/main.js",
   "browser": "index.js",
   "scripts": {
