@@ -1,6 +1,6 @@
 {
   "name": "clipcc-sb1-converter",
-  "version": "1.0.324",
+  "version": "1.0.325",
   "description": "Scratch 1 (.sb) to Scratch 2 (.sb2) conversion library for Scratch 3.0",
   "author": "Clipteam",
   "license": "BSD-3-Clause",
@@ -9,6 +9,7 @@
     "type": "git",
     "url": "https://github.com/Clipteam/scratch-sb1-converter.git"
   },
+  "type": "module",
   "main": "playground/main.js",
   "browser": "index.js",
   "scripts": {
@@ -24,9 +25,9 @@
     "watch": "vite build --watch -c vite.lib.config.js"
   },
   "dependencies": {
+    "@turbowarp/nanolog": "^1.0.1",
     "fastestsmallesttextencoderdecoder": "^1.0.22",
-    "js-md5": "^0.8.3",
-    "@turbowarp/nanolog": "^1.0.1"
+    "js-md5": "^0.8.3"
   },
   "devDependencies": {
     "eslint": "8.57.1",
@@ -34,6 +35,7 @@
     "json": "^9.0.4",
     "tap": "21.6.2",
     "terser": "^5.46.0",
-    "vite": "^7.3.1"
+    "vite": "^7.3.1",
+    "vite-plugin-node-polyfills": "^0.25.0"
   }
 }
