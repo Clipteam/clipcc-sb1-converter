@@ -1,7 +1,7 @@
-const test = require('tap').test;
+import {test} from 'tap';
 
-const {Packet} = require('../../src/coders/byte-packets');
-const {Uint8, Uint16LE} = require('../../src/coders/byte-primitives');
+import {Packet} from '../../src/coders/byte-packets';
+import {Uint8, Uint16LE} from '../../src/coders/byte-primitives';
 
 test('spec', t => {
     t.type(Packet, 'function');
@@ -19,7 +19,7 @@ test('spec', t => {
 
 test('equals (true)', t => {
     const packet = new Packet();
-    t.true(packet.equals({
+    t.ok(packet.equals({
         offset: 0
     }));
     t.end();
@@ -27,7 +27,7 @@ test('equals (true)', t => {
 
 test('equals (false)', t => {
     const packet = new Packet();
-    t.false(packet.equals({
+    t.not(packet.equals({
         offset: 1
     }));
     t.end();
@@ -35,7 +35,7 @@ test('equals (false)', t => {
 
 test('equals (undefined)', t => {
     const packet = new Packet();
-    t.false(packet.equals({
+    t.not(packet.equals({
         foo: 'bar'
     }));
     t.end();

@@ -13,6 +13,7 @@
 # Coverage created files
 /.nyc_output
 /coverage
+/.tap
 
 # Exclude already built packages from testing with npm pack
 /scratch-sb1-converter-*.{tar,tgz}

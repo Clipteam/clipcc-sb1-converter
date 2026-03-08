@@ -1,3 +1,3 @@
-const minilog = require('minilog');
+import nanolog from '@turbowarp/nanolog';
 
-module.exports = new minilog('sb1-converter');
+export default new nanolog('sb1-converter');

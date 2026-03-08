@@ -1,6 +1,6 @@
-const test = require('tap').test;
+import {test} from 'tap';
 
-const SB1 = require('../..');
+import * as SB1 from '../../index';
 
 test('spec', t => {
     t.type(SB1, Object);

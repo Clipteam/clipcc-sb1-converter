@@ -1,6 +1,6 @@
-const test = require('tap').test;
+import {test} from 'tap';
 
-const {
+import {
     BytePrimitive,
     Uint8,
     Uint16BE,
@@ -11,7 +11,7 @@ const {
     Int32BE,
     DoubleBE,
     FixedAsciiString
-} = require('../../src/coders/byte-primitives');
+} from '../../src/coders/byte-primitives';
 
 test('spec', t => {
     t.type(BytePrimitive, 'function');
@@ -140,7 +140,7 @@ test('DoubleBE', t => {
     t.type(DoubleBE.toBytes, 'object');
 
     const bytes = new Uint8Array([1, 0, 0, 0, 0, 0, 0, 0, 0]);
-    t.true(DoubleBE.read(bytes, 0) > 0);
+    t.ok(DoubleBE.read(bytes, 0) > 0);
     t.throws(() => {
         DoubleBE.write(bytes, 0, -1);
     });

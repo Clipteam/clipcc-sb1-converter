@@ -7,7 +7,7 @@ import {FieldObject} from './field-object';
 import {value as valueOf} from './fields';
 import {TYPES} from './ids';
 
-import md5 from 'js-md5';
+import {md5} from 'js-md5';
 
 /**
  * @extends FieldObject

@@ -1,8 +1,8 @@
-const fs = require('fs');
-const path = require('path');
-const test = require('tap').test;
+import fs from 'fs';
+import path from 'path';
+import {test} from 'tap';
 
-const {SB1File} = require('../..');
+import {SB1File} from '../..';
 
 test('default', t => {
     const uri = path.resolve(__dirname, '../fixtures/valid/default.sb');
@@ -16,7 +16,7 @@ test('default', t => {
     t.deepEqual(json.lists, []);
     t.deepEqual(json.scripts, []);
 
-    t.true(Array.isArray(json.costumes));
+    t.ok(Array.isArray(json.costumes));
     t.equal(json.costumes[0].costumeName, 'background1');
     t.equal(json.costumes[0].baseLayerID, 0);
     t.equal(json.costumes[0].baseLayerMD5, 'be2aa84eeac485ab8d9ca51294cd926e.png');
@@ -24,7 +24,7 @@ test('default', t => {
     t.equal(json.costumes[0].rotationCenterX, 240);
     t.equal(json.costumes[0].rotationCenterY, 180);
 
-    t.true(Array.isArray(json.sounds));
+    t.ok(Array.isArray(json.sounds));
     t.equal(json.sounds[0].soundName, 'pop');
     t.equal(json.sounds[0].soundID, 0);
     t.equal(json.sounds[0].md5, '83a9787d4cb6f3b7632b4ddfebf74367.wav');
@@ -32,7 +32,7 @@ test('default', t => {
     t.equal(json.sounds[0].rate, 11025);
     t.equal(json.sounds[0].format, '');
 
-    t.true(Array.isArray(json.children));
+    t.ok(Array.isArray(json.children));
     t.equal(json.children[0].objName, 'Sprite1');
     t.equal(json.children[0].currentCostumeIndex, 0);
     t.equal(json.children[0].scratchX, 0);

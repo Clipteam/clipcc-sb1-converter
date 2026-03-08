@@ -1,6 +1,6 @@
-const test = require('tap').test;
+import {test} from 'tap';
 
-const {Adler32} = require('../../src/coders/adler32');
+import {Adler32} from '../../src/coders/adler32';
 
 test('spec', t => {
     const instance = new Adler32();

@@ -1,8 +1,8 @@
-const test = require('tap').test;
+import {test} from 'tap';
 
-const {ByteStream} = require('../../src/coders/byte-stream');
-const {Packet} = require('../../src/coders/byte-packets');
-const {Uint8} = require('../../src/coders/byte-primitives');
+import {ByteStream} from '../../src/coders/byte-stream';
+import {Packet} from '../../src/coders/byte-packets';
+import {Uint8} from '../../src/coders/byte-primitives';
 
 test('spec', t => {
     t.type(ByteStream, 'function');

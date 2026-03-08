@@ -1,4 +1,4 @@
-const log = require('../util/log');
+import log from '../util/log';
 
 const _expanded = {};
 
