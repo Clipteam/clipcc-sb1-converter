@@ -9,8 +9,8 @@ export default defineConfig({
         lib: {
             entry: path.resolve(__dirname, 'index.js'),
             name: 'sb1Converter',
-            fileName: format => (format === 'umd' ? 'main.js' : `main.${format}.js`),
-            formats: ['umd']
+            fileName: format => (format === 'cjs' ? 'main.js' : `main.${format}.js`),
+            formats: ['cjs']
         }
     },
     plugins: [
